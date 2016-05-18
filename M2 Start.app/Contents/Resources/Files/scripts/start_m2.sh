@@ -4,8 +4,6 @@
 # Main startup script for Magento 2 docker container
 ##
 
-set -e
-
 RED_TEXT=`echo "\033[31m"`
 RESET='\033[00;00m'
 NORMAL=`echo "\033[m"`
