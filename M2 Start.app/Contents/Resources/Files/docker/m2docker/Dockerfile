@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER "Jonathan Bailey <jonathan.bailey@shipperhq.com>" 
+MAINTAINER "Jonathan Bailey : <jonathan.bailey@shipperhq.com>" 
  
 # Get Apache, mysql client, PHP etc (subset of a full LAMP stack - no MySQL server)
 RUN apt-get update && apt-get install -y apache2 mysql-client php5 php5-curl php5-mcrypt php5-gd php5-mysql php5-intl curl git php5-xsl
