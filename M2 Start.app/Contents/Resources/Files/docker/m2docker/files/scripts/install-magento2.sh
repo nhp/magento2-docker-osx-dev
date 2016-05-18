@@ -2,6 +2,7 @@
 
 # See also http://alankent.wordpress.com/2014/08/02/magento-2-progress-towards-installation-via-composer/
 
+set -e
 cd /var/www/magento2 
 
 rm -rf htdocs

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Show what we execute
-set -x
+set -ex
 
 DB_NAME="magento"
 

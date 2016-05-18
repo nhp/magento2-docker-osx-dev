@@ -4,6 +4,8 @@
 # Main startup script for Magento 2 docker container
 ##
 
+set -e
+
 RED_TEXT=`echo "\033[31m"`
 RESET='\033[00;00m'
 NORMAL=`echo "\033[m"`
@@ -12,7 +14,14 @@ check_required_installed(){
    
    if [ ! $(which docker-osx-dev) ]; then
       echo "! ${RED_TEXT}Please install docker-osx-dev and make sure is in \$PATH before proceeding${NORMAL} (see README)"
-      exit;
+      exit 1;
+   fi
+
+   if [ ! -f ../auth.json ]; then
+      echo "! ${RED_TEXT}Missing auth.json.  Please add in directory with this app before proceeding${NORMAL} (see README)"
+      exit 1;  
+   else
+      cp ../auth.json Contents/Resources/Files/docker/m2docker/files/
    fi
 }
 
