@@ -9,7 +9,7 @@ Before running you must have the following:
 * [Docker installed](https://docs.docker.com/mac/step_one/)
 * [Homebrew installed](#installing-homebrew)
 * [docker-osx-dev installed](#installing-docker-osx-dev)
-* Entry in /etc/hosts file for docker.localhost.com ([see notes below](#/etc/hosts-file))
+* Entry in /etc/hosts file for docker.localhost.com ([see notes below](#etchosts-file))
 * [Magento authentication keys](#magento-authentication-keys)
 
 ## Installing Homebrew
