@@ -1,0 +1,24 @@
+##
+# docker-compose-without-volumes.yml
+#
+# This is used after the initial build of the container so we can "docker cp" the 
+# container's files used in development to this host machine before adding
+# rsync and file watching
+##
+mysql:
+  image: mysql:5.6
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=admin
+magento2:
+  build: m2docker
+  ports:
+    - "80:80"
+  links:
+    - mysql
+  environment: 
+    - MYSQL_USER=root
+    - MYSQL_PASSWORD=admin
+    - PUBLIC_HOST=docker.localhost.com
+  command: bash -c "/usr/local/bin/runserver.sh"
